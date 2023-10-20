@@ -1,0 +1,58 @@
+Question 6
+
+I don't have personal preferences, but one of the most widely used version control systems is Git. Git is a distributed version control system that's known for its flexibility and efficiency. Below is a brief demonstration for a programmer who is not familiar with Git, covering the four requested tasks: creating a new project, working on an existing project, committing changes, and searching for a change that introduced a bug.
+
+Git Version Control System: Basics and Demonstration
+Task 1: Creating a New Project
+To create a new project in Git, you need to follow these steps:
+
+Initialize a Git Repository:
+You can start a new project by creating a new directory and initializing it as a Git repository using the git init command.
+
+mkdir my_project
+cd my_project
+git init
+Add and Commit Files:
+Create some files in your project directory, then add them to the staging area using git add and commit them to the repository using git commit.
+
+touch file1.txt file2.txt
+git add .
+git commit -m "Initial commit"
+Task 2: Begin Working on an Existing Project
+If you want to collaborate on an existing Git project, you can follow these steps:
+
+Clone a Repository:
+Clone a copy of the project's repository from a remote server using the git clone command.
+
+git clone <repository_url>
+Work on the Project:
+Now you can make changes to the project files. After making changes, use git add to stage your modifications and git commit to save your work locally.
+
+# Make changes to file1.txt
+git add file1.txt
+git commit -m "Add new feature"
+Task 3: Commit a Change
+Committing changes in Git is a fundamental process:
+
+Make Changes:
+Modify the files in your project as needed.
+
+Stage Changes:
+Use git add to stage the changes you want to commit.
+
+git add modified_file.txt
+Commit Changes:
+Commit the staged changes with a meaningful commit message.
+
+git commit -m "Implement feature X"
+Task 4: Search the History for a Change that Introduced a Bug
+To search for a change that introduced a bug, you can use Git's git log and git bisect commands:
+
+View Commit History:
+Use git log to view the commit history.
+
+git log
+Identify the Suspected Commit:
+Look for the point in the commit history where the bug was introduced. Note the commit hash.
+
+I would use a good gui interface for bisecting the bad commit(s) like GitHub Desktop or git extensions.

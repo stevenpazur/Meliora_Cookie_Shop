@@ -1,0 +1,34 @@
+5.2
+
+SQL statement to return name, breed, and age (sorted by age desc) of any living dogs owned by a person older than 50
+
+SELECT pets.name, pets.breed, pets.age
+FROM Pets pets
+	LEFT OUTER JOIN PersonPet pp ON pp.pet_id = pets.id
+	LEFT OUTER JOIN People people ON people.id = pp.person_id
+WHERE
+	people.age > 50
+ORDER BY
+	pets.age DESC
+
+
+
+5.3 Perform a query
+
+Result of the following query:
+
+SELECT breed, COUNT(breed) AS cnt FROM pets GROUP BY breed ORDER BY cnt DESC;
+
+breed       			|    cnt
+------------------------------------------
+Portuguese Water		      2
+Dog				      2
+Beagle				      2
+Great Dane	  		      1
+Scottish Terrier		      1
+Mixed Breed			      1
+
+
+
+
+
